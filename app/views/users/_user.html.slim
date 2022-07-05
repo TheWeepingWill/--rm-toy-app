@@ -1,12 +1,9 @@
-<div id="<%= dom_id user %>">
-  <p>
-    <strong>Name:</strong>
-    <%= user.name %>
-  </p>
+.card-padded id="user-#{user.id}"
+.font-bold Name:
+  = user.name 
 
-  <p>
-    <strong>Email:</strong>
-    <%= user.email %>
-  </p>
+.font-bold Email:
+  = user.email
 
-</div>
+= link_to 'View', user, class: 'btn-secondary'
+

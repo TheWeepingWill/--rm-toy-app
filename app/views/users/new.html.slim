@@ -1,9 +1,15 @@
-<h1>New user</h1>
+.container 
+  h1 New User 
+  form action='/users' method='POST'
+    section.card 
+      .card__body
+        .form__group
+          label.form__label Name
+          input.form__input type='text' placeholder='Your name...' name='user[name]'
+        .form__group
+          label.form__label email
+          input.form__input type='text' placeholder='Your email...' name='user[email]'
+      .card__footer.flex-end
+          button.btn type='submit' Create User
 
-<%= render "form", user: @user %>
-
-<br>
-
-<div>
-  <%= link_to "Back to users", users_path %>
-</div>
+    a.btn-outline href='/'  Back to Users
