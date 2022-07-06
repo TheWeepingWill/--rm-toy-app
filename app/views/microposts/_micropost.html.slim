@@ -1,12 +1,12 @@
-<div id="<%= dom_id micropost %>">
-  <p>
-    <strong>Content:</strong>
-    <%= micropost.content %>
-  </p>
+ id="dom_id micropost "
+  p
+    .font-bold Content:
+    = micropost.content 
+  
 
-  <p>
-    <strong>User:</strong>
-    <%= micropost.user_id %>
-  </p>
+  p
+    .font-bold User:
+    = micropost.user_id
 
-</div>
+  = link_to "Show this micropost", micropost 
+

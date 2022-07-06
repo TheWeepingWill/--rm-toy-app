@@ -1,6 +1,8 @@
+.container
+  p color='var(--rnm-color-green)' = notice
 
-p color='var(--rnm-color-green)' = notice
+  h1 Users
+  .flex.flex-col.justify-between
+    = render partial: 'user', collection: @users
 
-h1 Users
-= render partial: 'user', collection: @users
-= link_to 'New User', new_user_path, class: 'btn-primary'
+  = link_to 'New User', new_user_path, class: 'btn-primary'
