@@ -1,11 +1,12 @@
 p color='var(--rnm-color-green)' = notice
 
-= user
+p = @user.name
+p = @user.email
 
-div
+.card-padded
   = link_to 'Edit this user', 'edit_user(@user)'  
   = '|'
   = link_to "Back to users", '/'
 
-  <%= button_to "Destroy this user", @user, method: :delete %>
+  = button_to "Destroy this user", @user, method: :delete
 

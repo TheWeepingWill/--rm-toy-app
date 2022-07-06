@@ -1,15 +1,11 @@
 .container 
   h1 New User 
-  form action='/users' method='POST'
+  = simple_form_for(@user) do |f| 
     section.card 
       .card__body
-        .form__group
-          label.form__label Name
-          input.form__input type='text' placeholder='Your name...' name='user[name]'
-        .form__group
-          label.form__label email
-          input.form__input type='text' placeholder='Your email...' name='user[email]'
+        = f.input :name 
+        = f.input :email
       .card__footer.flex-end
-          button.btn type='submit' Create User
+        = f.submit class: 'btn-primary'
 
-    a.btn-outline href='/'  Back to Users
+  = link_to "Back to Users", users_path, class: 'btn-secondary'
