@@ -1,9 +1,12 @@
-<h1>New micropost</h1>
+.container
+  h1 New Micropost 
 
-<%= render "form", micropost: @micropost %>
+  = simple_form_for(@micropost) do |f| 
+    section.card 
+      .card__body
+        = f.input :content
+        = f.input :user_id
+      .card__footer.flex-end
+        = f.submit class: 'btn-primary'
+  = link_to "Back to microposts", microposts_path, class: 'btn-secondary'
 
-<br>
-
-<div>
-  <%= link_to "Back to microposts", microposts_path %>
-</div>

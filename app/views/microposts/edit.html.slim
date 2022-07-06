@@ -1,10 +1,15 @@
-<h1>Editing micropost</h1>
+h1 Editing micropost
 
-<%= render "form", micropost: @micropost %>
+= simple_form_for(@micropost) do |f|
+  section.card 
+    .card__body 
+      = f.input :content
+      = f.input :user_id
+    .card__footer.flex-end
+      = f.submit class: 'btn-primary'
 
-<br>
 
-<div>
-  <%= link_to "Show this micropost", @micropost %> |
-  <%= link_to "Back to microposts", microposts_path %>
-</div>
+
+  = link_to "Show this micropost", @micropost 
+  = '|'
+  = link_to "Back to microposts", microposts_path 

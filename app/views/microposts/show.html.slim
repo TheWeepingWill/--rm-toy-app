@@ -1,10 +1,14 @@
-<p style="color: green"><%= notice %></p>
+.container.text-center
+  p style="color: green"= notice 
+  h1 Micropost
+  .card
+    .card__body.text-center
+      p.btn-outline = "Content: #{@micropost.content}"
+      p.btn-outline = "User ID: #{@micropost.user_id}" 
 
-<%= render @micropost %>
+  = link_to "Edit this micropost", edit_micropost_path(@micropost), class: 'btn-secondary'
+  - '|'
+  = link_to "Back to microposts", microposts_path, class: 'btn-secondary'
 
-<div>
-  <%= link_to "Edit this micropost", edit_micropost_path(@micropost) %> |
-  <%= link_to "Back to microposts", microposts_path %>
+  = button_to "Destroy this micropost", @micropost, method: :delete, class: 'btn-delete'
 
-  <%= button_to "Destroy this micropost", @micropost, method: :delete %>
-</div>

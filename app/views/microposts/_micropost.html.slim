@@ -1,11 +1,11 @@
 .text-center
-  .card 
+  .card id="Id: #{micropost.user_id}"
     .card__body
       .font-bold Content:
       = micropost.content 
 
       .font-bold User:
       = micropost.user_id
-
-    = link_to "Show this micropost", @micropost, class: 'btn-secondary'
+      
+    = link_to "Show this micropost", micropost, class: 'btn-secondary'
 
