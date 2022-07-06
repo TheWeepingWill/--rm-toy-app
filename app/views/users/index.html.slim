@@ -1,11 +1,6 @@
+
 p color='var(--rnm-color-green)' = notice
 
 h1 Users
 = render partial: 'user', collection: @users
-/ div id="users"
-/   - @users.each do |user| 
-/     - render user 
-/     a href='user' Show this user
-
-/ a href='users/new' New User
 = link_to 'New User', new_user_path, class: 'btn-primary'

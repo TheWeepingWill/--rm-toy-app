@@ -1115,8 +1115,8 @@ button {
   padding: 0;
   background: none;
   cursor: pointer;
-  color: hsl(0, 0%, 0%);
-  color: var(--rm-color-black);
+  /* color: hsl(0, 0%, 0%); */
+  color: var(--rm-alerts-danger-base);
 }
 a {
   color: hsl(207, 92%, 64%);

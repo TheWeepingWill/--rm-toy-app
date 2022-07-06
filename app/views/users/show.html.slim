@@ -1,12 +1,15 @@
-p color='var(--rnm-color-green)' = notice
+.container.text-center
+  p color='var(--rnm-color-green)' = notice
 
-p = @user.name
-p = @user.email
+  .card
+    .card__body.text-center
+      p.btn-outline = "Name: #{@user.name}"
+      p.btn-outline = "Email: #{@user.email}" 
+  
+  .card__body
+    = link_to 'Edit this user', edit_user_url(@user), class: 'btn-secondary' 
+    = '|'
+    = link_to "Back to users", '/', class: 'btn-secondary'
 
-.card-padded
-  = link_to 'Edit this user', 'edit_user(@user)'  
-  = '|'
-  = link_to "Back to users", '/'
-
-  = button_to "Destroy this user", @user, method: :delete
+    = button_to 'Destroy this user', @user, method: :delete, class: 'btn-delete'
 
