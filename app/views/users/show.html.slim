@@ -5,6 +5,7 @@
     .card__body.text-center
       p.btn-outline = "Name: #{@user.name}"
       p.btn-outline = "Email: #{@user.email}" 
+      p.btn-outline = "Microposts: #{@user.microposts.map { |post| p post.content }}" 
   
   .card__body
     = link_to 'Edit this user', edit_user_url(@user), class: 'btn-secondary' 
