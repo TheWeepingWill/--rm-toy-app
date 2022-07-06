@@ -1,7 +1,8 @@
-p style="color: green" = notice
+.container.text-center
+  p style="color: green" = notice
 
-h1 Microposts
-.flex-box.flex-center.gap-md
+  h1 Microposts
   = render partial: 'micropost', collection: @microposts
 
-= link_to "New micropost", new_micropost_path 
+  = link_to "New micropost", new_micropost_path, class: 'btn-primary' 
+

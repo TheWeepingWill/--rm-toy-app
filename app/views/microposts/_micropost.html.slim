@@ -1,12 +1,11 @@
- id="dom_id micropost "
-  p
-    .font-bold Content:
-    = micropost.content 
-  
+.text-center
+  .card 
+    .card__body
+      .font-bold Content:
+      = micropost.content 
 
-  p
-    .font-bold User:
-    = micropost.user_id
+      .font-bold User:
+      = micropost.user_id
 
-  = link_to "Show this micropost", micropost 
+    = link_to "Show this micropost", @micropost, class: 'btn-secondary'
 
